@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect 
+from django.views.decorators.csrf import csrf_protect
 from django.views.generic import TemplateView, View 
 from django.contrib.auth import authenticate, login
 from .forms import UserRegisterForm

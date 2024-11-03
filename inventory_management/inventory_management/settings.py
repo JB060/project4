@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-_pxidpg+#)xd-8thlm1-79#rdlk7syk34emcqfip5v*nf&zbcj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-jb060-project4-wcp8mhc7qj0.ws-eu116.gitpod.io']
+ALLOWED_HOSTS = ['8000-jb060-project4-c3722lblfga.ws-eu116.gitpod.io']
 
 
 # Application definition
@@ -45,7 +45,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     # other middleware
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
