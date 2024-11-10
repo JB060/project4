@@ -3,8 +3,8 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView, View, CreateView
 from django.contrib.auth import authenticate, login 
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .forms import UserRegisterForm
-from .models import InventoryItem
+from .forms import UserRegisterForm, InventoryItemForm
+from .models import InventoryItem,Category
 
 class Index(TemplateView):
     template_name = 'inventory/index.html'
@@ -41,12 +41,12 @@ class AddItem(LoginRequiredMixin, CreateView):
 	    template_name = 'inventory/item_form.html'
 	    success_url = reverse_lazy('dashboard')
 
-    def get_context_data(self, **kwargs):
+def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
 		context['categories'] = Category.objects.all()
 		return context
 
-    def form_valid(self, form):
+def form_valid(self, form):
 		form.instance.user = self.request.user
 		return super().form_valid(form)
 
