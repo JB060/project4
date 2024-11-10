@@ -20,7 +20,7 @@
 				{% endfor %}
 			{% endif %}
 
-			<form method="POST">
+			<form method="post">
 				{% csrf_token %}
 				{{ form|crispy }}
 

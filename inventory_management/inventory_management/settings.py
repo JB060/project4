@@ -25,15 +25,15 @@ SECRET_KEY = 'django-insecure-_pxidpg+#)xd-8thlm1-79#rdlk7syk34emcqfip5v*nf&zbcj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-jb060-project4-c3722lblfga.ws-eu116.gitpod.io']
-
+ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS= ['https://*.gitpod.io']
 
 # Application definition
 
 INSTALLED_APPS = [
-    'crispy_bootstrap5',
-    'crispy_forms',
     'inventory',
+    'crispy_forms',
+    'crispy_bootstrap5',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
