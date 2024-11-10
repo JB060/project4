@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect 
+from django.urls import reverse_lazy
 from django.views.generic import TemplateView, View, CreateView
 from django.contrib.auth import authenticate, login 
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -34,7 +35,11 @@ class SignUpView(View):
 
         return render (request, 'inventory/signup.html', {'form':form})
 
-        class AddItem(LoginRequiredMixin, )
+    class AddItem(LoginRequiredMixin, CreateView):
+	    model = InventoryItem
+	    form_class = InventoryItemForm
+	    template_name = 'inventory/item_form.html'
+	    success_url = reverse_lazy('dashboard')
 
 
 
