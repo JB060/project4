@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect 
-from django.views.generic import TemplateView, View 
+from django.views.generic import TemplateView, View, CreateView
 from django.contrib.auth import authenticate, login 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import UserRegisterForm
@@ -33,6 +33,8 @@ class SignUpView(View):
             return redirect ('index')
 
         return render (request, 'inventory/signup.html', {'form':form})
+
+        class AddItem(LoginRequiredMixin, )
 
 
 
