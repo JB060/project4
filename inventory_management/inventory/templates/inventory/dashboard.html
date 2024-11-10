@@ -14,22 +14,21 @@
                         <th scope ="col">NAME</th>
                         <th scope ="col">Qty</th>
                         <th scope ="col">Catergory</th>
-                        <th scope ="col">ID</th>
-                        <th scope ="col">ID</th>
+                        <th scope ="col"></th>
+                        <th scope ="col"></th>
                         
                     </tr>
                 </thead>
                 <tbody>
                     {% if items|length == 0 %}
                     <tr>
-                        <th scope ="row">-</th>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td><td>
-                        <td></td>
-                    </tr>
+						<th scope="row">-</th>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td></td>
+					</tr>
                     {% endif %}
 
                     {% for item in items %}
@@ -38,6 +37,7 @@
 						<td>{{ item.name }}</td>
                         <td>{{ item.quantity }}</td>
                         <td>{{ item.category.name }}</td>
+                        <td></td>
                         <td></td>
                     </tr>
 						
