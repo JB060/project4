@@ -1,131 +1,169 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Inventory Management System
 
-Welcome Jason Byrne,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
-
-### Connecting your Mongo database
-
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**June 18, 2024,** Add Mongo back into template
-
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
-
-**May 28 2024:** Fix Mongo and Links installs
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+A Django-based web application to manage and track inventory items, organize them by categories, and receive alerts for low stock levels. This system allows users to register, authenticate, and access a personalized dashboard for efficient inventory management.
 
 ---
 
-Happy coding!
+## User Experience (UX)
+
+### Strategy
+
+#### Project Goals
+- Develop a user-friendly inventory management application for personal or small business use.
+- Allow users to easily track inventory levels, organize items by category, and receive low-inventory alerts.
+
+#### User Goals
+- **Effortless item tracking**: Users should be able to add, edit, delete, and view items in their inventory.
+- **Category organization**: Users can categorize items for easier navigation and organization.
+- **Low inventory alerts**: Users receive warnings when items are running low to facilitate timely restocking.
+
+#### Strategy Table
+
+| Feature                | Importance | Viability |
+|------------------------|------------|-----------|
+| User authentication    | High       | High      |
+| Item CRUD operations   | High       | High      |
+| Low inventory alerts   | High       | High      |
+| Category management    | Medium     | High      |
+| Responsive design      | High       | High      |
+
+---
+
+### Scope
+
+#### User Stories
+
+1. As a user, I want to create an account so that I can securely log in to the app.
+2. As a user, I want to add items to my inventory so that I can keep track of stock levels.
+3. As a user, I want to categorize items to organize my inventory.
+4. As a user, I want to receive alerts when items are running low to stay informed about restocking needs.
+5. As a user, I want a dashboard that summarizes my inventory at a glance.
+
+---
+
+### Structure
+
+- **Navigation**: Simple navigation with links to key features (dashboard, add item, sign in/out).
+- **CRUD Operations**: Comprehensive item management options, including add, edit, delete, and view.
+- **User Authentication**: Secure access to manage inventory.
+
+---
+
+### Skeleton
+
+- **Home Page**: Welcomes users and prompts them to log in or sign up.
+- **Dashboard**: Main inventory management interface with a table of items.
+- **Inventory Forms**: Forms for adding, editing, and deleting items.
+- **Authentication Pages**: Separate pages for login, logout, and signup.
+
+---
+
+### Surface
+
+- **Color Scheme**: Uses Bootstrap Minty theme for a clean, user-friendly interface.
+- **Typography**: Readable and accessible fonts for a professional look.
+- **Layout**: Responsive layout using Bootstrap grid, optimized for desktop and mobile.
+
+---
+
+## Features
+
+### General
+- **Responsive Design**: Accessible on all devices with a clean, minimalistic interface.
+- **Error Messages**: Provides visual feedback for successful actions and alerts for low inventory.
+
+### Home Page
+- Introduces the app and allows users to log in or sign up.
+
+### Dashboard
+- Displays an organized view of all inventory items.
+- Allows for easy access to add, edit, or delete items.
+
+### Authentication Pages
+- **Login**: Authenticates existing users.
+- **Signup**: Allows new users to register.
+- **Logout**: Provides an option for users to log out securely.
+
+### Item Management Pages
+- **Add Item**: Form to add a new item to the inventory.
+- **Edit Item**: Allows users to update item information.
+- **Delete Item**: Removes an item from the inventory.
+
+---
+
+## Technologies Used
+
+### Languages Used
+- **HTML5**: Structure and layout of pages.
+- **CSS3**: Styling with Bootstrap framework.
+- **Python**: Core application logic with Django framework.
+
+### Libraries and Frameworks
+- **Django**: Backend web framework for app functionality.
+- **Bootstrap**: Frontend framework for styling and responsive design.
+- **Crispy Forms**: For rendering Django forms with Bootstrap styling.
+
+### Packages / Dependencies Installed
+- **Django**: Main web framework.
+- **Crispy Forms**: Enhances form styling with Bootstrap.
+- **Django Authentication**: Manages user authentication flows.
+
+### Database Management
+- **SQLite**: Local database for development.
+- **PostgreSQL** (optional): For production deployments.
+
+### Tools and Programs
+- **Visual Studio Code**: Development environment.
+- **Git**: Version control.
+- **Heroku**: For deployment.
+- **Postman**: For testing API endpoints.
+- **GitHub**: Version control and collaboration.
+
+---
+
+## Testing
+
+The testing phase included a combination of manual and automated tests to ensure all functionality works as expected. 
+
+### Manual Testing
+
+Each feature was manually tested by simulating user interactions, including:
+1. **User Authentication**: Verified sign-up, login, and logout functionalities.
+2. **Inventory CRUD Operations**: Tested adding, editing, deleting, and viewing inventory items.
+3. **Low Inventory Alerts**: Confirmed alerts display for items at or below the minimum threshold.
+4. **Responsive Design**: Verified the application's compatibility across various screen sizes (desktop, tablet, and mobile).
+5. **Error Handling**: Checked for error messages in case of incorrect inputs (e.g., empty fields).
+
+### Automated Testing
+
+Automated tests were written for critical components:
+- **Models**: Validated data integrity and relationships, such as items linked to specific categories.
+- **Views**: Ensured views return the correct data and templates based on user permissions.
+- **Forms**: Tested form validation and field requirements.
+
+---
+
+## Deployment
+
+### Steps to Deploy on Heroku
+
+1. Create a Heroku account and install Heroku CLI.
+2. Clone this repository and navigate to the project folder.
+3. Run `heroku create` to create a new Heroku app.
+4. Push the project to Heroku with `git push heroku main`.
+5. Set environment variables and configure the database on Heroku.
+6. Run `heroku run python manage.py migrate` to set up the database.
+
+---
+
+### Finished Product
+
+Once deployed, access the live application to manage inventory items efficiently.
+
+
+
+
+
+
+
+
