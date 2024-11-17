@@ -101,6 +101,7 @@ A Django-based web application to manage and track inventory items, organize the
 ![Dashboard Database](media/inventory-database.png)
 ![Dashboard Database](media/listed-itemsdropdown.png)
 ![Dashboard Database](media/item-added.png)
+![New User added](media/jasonbyrne060signup.png)
 
 ---
 
