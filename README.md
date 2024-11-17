@@ -89,6 +89,7 @@ A Django-based web application to manage and track inventory items, organize the
 - **Login**: Authenticates existing users.
 - **Signup**: Allows new users to register.
 - **Logout**: Provides an option for users to log out securely.
+![Signup page](media/signup-page.png)
 
 ### Item Management Pages
 - **Add Item**: Form to add a new item to the inventory.
