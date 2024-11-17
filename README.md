@@ -74,6 +74,7 @@ A Django-based web application to manage and track inventory items, organize the
 
 ### Home Page
 - Introduces the app and allows users to log in or sign up.
+- ![Home page]()
 
 ### Dashboard
 - Displays an organized view of all inventory items.
