@@ -4,6 +4,35 @@ A Django-based web application to manage and track inventory items, organize the
 
 ---
 
+## Table of Contents
+
+1. [User Experience (UX)](#user-experience-ux)  
+   - [Strategy](#strategy)  
+   - [Scope](#scope)  
+   - [Structure](#structure)  
+   - [Skeleton](#skeleton)  
+   - [Surface](#surface)  
+2. [Features](#features)  
+   - [General](#general)  
+   - [Home Page](#home-page)  
+   - [Dashboard](#dashboard)  
+   - [Authentication Pages](#authentication-pages)  
+   - [Item Management Pages](#item-management-pages)  
+3. [Technologies Used](#technologies-used)  
+   - [Languages Used](#languages-used)  
+   - [Libraries and Frameworks](#libraries-and-frameworks)  
+   - [Packages / Dependencies Installed](#packages--dependencies-installed)  
+   - [Database Management](#database-management)  
+   - [Tools and Programs](#tools-and-programs)  
+4. [Testing](#testing)  
+   - [Manual Testing](#manual-testing)  
+   - [Automated Testing](#automated-testing)  
+5. [Deployment](#deployment)  
+   - [Steps to Deploy on Heroku](#steps-to-deploy-on-heroku)  
+   - [Finished Product](#finished-product)  
+
+---
+
 ## User Experience (UX)
 
 ### Strategy
@@ -45,10 +74,8 @@ A Django-based web application to manage and track inventory items, organize the
 
 - **Navigation**: Simple navigation with links to key features (dashboard, add item, sign in/out).
 - **CRUD Operations**: Comprehensive item management options, including add, edit, delete, and view.
-- **User Authentication**: Secure access to manage inventory.
+- **User Authentication**: Secure access to manage inventory.  
 ![Start Page](media/project4-structure.png)
-
-
 
 ---
 
@@ -63,7 +90,7 @@ A Django-based web application to manage and track inventory items, organize the
 
 ### Surface
 
-- **Color Scheme**: Uses Bootstrap Minty theme for a clean, user-friendly interface.
+- **Color Scheme**: Uses Bootstrap Minty theme for a clean, user-friendly interface.  
 ![Color Swatch](media/Color-swatch.png)
 - **Typography**: Readable and accessible fonts for a professional look.
 - **Layout**: Responsive layout using Bootstrap grid, optimized for desktop and mobile.
@@ -77,37 +104,33 @@ A Django-based web application to manage and track inventory items, organize the
 - **Error Messages**: Provides visual feedback for successful actions and alerts for low inventory.
 
 ### Home Page
-- Introduces the app and allows users to log in or sign up.
+- Introduces the app and allows users to log in or sign up.  
 ![Home page](media/project4-startpage.png)
-
 
 ### Dashboard
 - Displays an organized view of all inventory items.
-- Allows for easy access to add, edit, or delete items.
+- Allows for easy access to add, edit, or delete items.  
 ![Dashboard Database](media/inventory-database.png)
 
 ### Authentication Pages
 - **Login**: Authenticates existing users.
 - **Signup**: Allows new users to register.
-- **Logout**: Provides an option for users to log out securely.
-![signin page](media/projet4-loginauthpage.png)
-![Signup page](media/signup-page.png)
-- New User added to the system.
+- **Logout**: Provides an option for users to log out securely.  
+![Signin page](media/projet4-loginauthpage.png)  
+![Signup page](media/signup-page.png)  
+- New User added to the system.  
 ![New User added](media/jasonbyrne060signup.png)
+
 ### Item Management Pages
-- **Add Item**: Form to add a new item to the inventory.
-![Dashboard Database](media/inventory-database.png)
-![added item](media/item-added.png)
-- **Edit Item**: Allows users to update item information.
+- **Add Item**: Form to add a new item to the inventory.  
+![Dashboard Database](media/inventory-database.png)  
+![Added item](media/item-added.png)
+- **Edit Item**: Allows users to update item information.  
 ![Dashboard Database](media/listed-itemsdropdown.png)
-- **Delete Item**: Removes an item from the inventory.
+- **Delete Item**: Removes an item from the inventory.  
 ![Dashboard Database](media/item-added.png)
-- **Low Inventory Item**: Shows items with low inventory and gives a warning:
-![New User added](media/jasonbyrne060signup.png)
-
-
-
-
+- **Low Inventory Item**: Shows items with low inventory and gives a warning:  
+![Low Inventory](media/jasonbyrne060signup.png)
 
 ---
 
@@ -143,8 +166,6 @@ A Django-based web application to manage and track inventory items, organize the
 
 ## Testing
 
-The testing phase included a combination of manual and automated tests to ensure all functionality works as expected. 
-
 ### Manual Testing
 
 Each feature was manually tested by simulating user interactions, including:
@@ -179,10 +200,6 @@ Automated tests were written for critical components:
 ### Finished Product
 
 Once deployed, access the live application to manage inventory items efficiently.
-
-
-
-
 
 
 
