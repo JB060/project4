@@ -44,7 +44,7 @@ A Django-based web application to manage and track inventory items, organize the
 #### User Goals
 - **Effortless item tracking**: Users should be able to add, edit, delete, and view items in their inventory.
 - **Category organization**: Users can categorize items for easier navigation and organization.
-- **Low inventory alerts**: Users receive warnings when items are running low to facilitate timely restocking.
+- **Low inventory alerts**: Users receive warnings when items run low to facilitate timely restocking.
 
 #### Strategy Table
 
