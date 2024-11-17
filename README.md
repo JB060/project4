@@ -65,7 +65,7 @@ A Django-based web application to manage and track inventory items, organize the
 
 - **Color Scheme**: Uses Bootstrap Minty theme for a clean, user-friendly interface.
 
-| Type        |  
+| Type        |  ![Color Swatch](media/Color-swatch.png)
 |-------------|
 | **Active**  | 
 | Default     | 
