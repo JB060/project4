@@ -95,13 +95,17 @@ A Django-based web application to manage and track inventory items, organize the
 ![New User added](media/jasonbyrne060signup.png)
 ### Item Management Pages
 - **Add Item**: Form to add a new item to the inventory.
-- **Edit Item**: Allows users to update item information.
-- **Delete Item**: Removes an item from the inventory.
-- **Low Inventory Item**: Shows items with low inventory and gives a warning:
 ![Dashboard Database](media/inventory-database.png)
+- **Edit Item**: Allows users to update item information.
 ![Dashboard Database](media/listed-itemsdropdown.png)
+- **Delete Item**: Removes an item from the inventory.
 ![Dashboard Database](media/item-added.png)
+- **Low Inventory Item**: Shows items with low inventory and gives a warning:
 ![New User added](media/jasonbyrne060signup.png)
+
+
+
+
 
 ---
 
