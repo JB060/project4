@@ -91,7 +91,8 @@ A Django-based web application to manage and track inventory items, organize the
 - **Logout**: Provides an option for users to log out securely.
 ![signin page](media/projet4-loginauthpage.png)
 ![Signup page](media/signup-page.png)
-
+- New User added to the system.
+![New User added](media/jasonbyrne060signup.png)
 ### Item Management Pages
 - **Add Item**: Form to add a new item to the inventory.
 - **Edit Item**: Allows users to update item information.
