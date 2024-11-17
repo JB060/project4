@@ -78,7 +78,7 @@ A Django-based web application to manage and track inventory items, organize the
 ### Home Page
 - Introduces the app and allows users to log in or sign up.
 ![Home page](media/project4-startpage.png)
-![signin page](media/projet4-loginauthpage.png)
+
 
 ### Dashboard
 - Displays an organized view of all inventory items.
@@ -89,6 +89,7 @@ A Django-based web application to manage and track inventory items, organize the
 - **Login**: Authenticates existing users.
 - **Signup**: Allows new users to register.
 - **Logout**: Provides an option for users to log out securely.
+![signin page](media/projet4-loginauthpage.png)
 ![Signup page](media/signup-page.png)
 
 ### Item Management Pages
