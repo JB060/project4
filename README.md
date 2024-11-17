@@ -46,8 +46,8 @@ A Django-based web application to manage and track inventory items, organize the
 - **Navigation**: Simple navigation with links to key features (dashboard, add item, sign in/out).
 - **CRUD Operations**: Comprehensive item management options, including add, edit, delete, and view.
 - **User Authentication**: Secure access to manage inventory.
-- ![Start Page](media/project4-structure.png)
-)
+![Start Page](media/project4-structure.png)
+
 
 ---
 
