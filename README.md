@@ -67,6 +67,7 @@ A Django-based web application to manage and track inventory items, organize the
 3. As a user, I want to categorize items to organize my inventory.
 4. As a user, I want to receive alerts when items are running low to stay informed about restocking needs.
 5. As a user, I want a dashboard that summarizes my inventory at a glance.
+![User Stories](media/pages-stories.png)
 
 ---
 
