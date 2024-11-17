@@ -83,6 +83,7 @@ A Django-based web application to manage and track inventory items, organize the
 ### Dashboard
 - Displays an organized view of all inventory items.
 - Allows for easy access to add, edit, or delete items.
+![Dashboard Database](media/inventory-database.png)
 
 ### Authentication Pages
 - **Login**: Authenticates existing users.
