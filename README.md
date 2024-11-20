@@ -18,16 +18,18 @@ A Django-based web application to manage and track inventory items, organize the
    - [Dashboard](#dashboard)  
    - [Authentication Pages](#authentication-pages)  
    - [Item Management Pages](#item-management-pages)  
-3. [Technologies Used](#technologies-used)  
+   - [Additional Features](#additional-features)  
+3. [Future Features](#future-features)  
+4. [Technologies Used](#technologies-used)  
    - [Languages Used](#languages-used)  
    - [Libraries and Frameworks](#libraries-and-frameworks)  
    - [Packages / Dependencies Installed](#packages--dependencies-installed)  
    - [Database Management](#database-management)  
    - [Tools and Programs](#tools-and-programs)  
-4. [Testing](#testing)  
+5. [Testing](#testing)  
    - [Manual Testing](#manual-testing)  
    - [Automated Testing](#automated-testing)  
-5. [Deployment](#deployment)  
+6. [Deployment](#deployment)  
    - [Steps to Deploy on Heroku](#steps-to-deploy-on-heroku)  
    - [Finished Product](#finished-product)  
 
@@ -133,6 +135,47 @@ A Django-based web application to manage and track inventory items, organize the
 - **Low Inventory Item**: Shows items with low inventory and gives a warning:  
 ![Low Inventory](media/jasonbyrne060signup.png)
 
+---
+
+## Future Features
+
+To enhance the application's functionality and user experience, the following features are planned for future implementation:
+
+1. **Inventory Notifications**:
+   - Real-time email or SMS notifications for low-stock or out-of-stock items.
+   - Periodic reports summarizing inventory levels and critical items.
+
+2. **Role-Based Access Control**:
+   - Introduce user roles such as admin, manager, and staff.
+   - Provide role-specific access to certain features and data.
+
+3. **Inventory Import/Export**:
+   - Allow users to bulk import items via Excel or CSV files.
+   - Enable exporting detailed inventory reports in PDF and CSV formats.
+
+4. **Barcode Scanning Integration**:
+   - Implement barcode scanning for faster inventory management.
+   - Generate printable barcodes for items.
+
+5. **Audit Logs**:
+   - Track and display a history of changes made to inventory items for accountability.
+
+6. **Multi-Warehouse Support**:
+   - Manage inventory across multiple warehouses or locations.
+   - Include stock transfer functionality between locations.
+
+7. **Analytics Dashboard**:
+   - Add visualizations like graphs and charts to display stock trends, top-selling items, and restocking needs.
+
+8. **API Integration**:
+   - Provide an API to allow third-party systems to interact with the inventory management application.
+
+9. **Mobile App Support**:
+   - Develop a mobile-friendly version or standalone app for Android and iOS.
+
+10. **Dark Mode**:
+    - Offer a dark mode for improved user experience and accessibility.
+   
 ---
 
 ## Technologies Used
