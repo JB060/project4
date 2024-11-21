@@ -2,20 +2,31 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-	<a href="{% url 'dashboard' %}" class="btn btn-outline-primary my-3 mx-4">Go Back</a>
+<!-- Button to navigate back to the dashboard -->
+<a href="{% url 'dashboard' %}" class="btn btn-outline-primary my-3 mx-4">Go Back</a>
 
-	<div class="row">
-		<div class="col-11 col-md-4 mx-auto mt-5">
-			<h1>Inventory Item</h1>
+<!-- Begin the form layout in a row for responsive design -->
+<div class="row">
+    <!-- Center the content in the column -->
+    <div class="col-11 col-md-4 mx-auto mt-5">
+        
+        <!-- Page heading for the Inventory Item form -->
+        <h1>Inventory Item</h1>
 
-			<form method="POST">
-				{% csrf_token %}
-				{{ form|crispy }}
+        <!-- Form for adding a new inventory item -->
+        <form method="POST">
+            <!-- CSRF token for security -->
+            {% csrf_token %}
 
-				<div class="mt-3">
-					<button class="btn btn-primary">Add Item</button>
-				</div>
-			</form>
-		</div>
-	</div>
+            <!-- Render the form fields using crispy-forms for better styling -->
+            {{ form|crispy }}
+
+            <!-- Submit button to add the item to the inventory -->
+            <div class="mt-3">
+                <button class="btn btn-primary">Add Item</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 {% endblock content %}
