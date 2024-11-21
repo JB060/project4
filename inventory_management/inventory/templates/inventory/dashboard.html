@@ -1,86 +1,96 @@
 {% extends 'inventory/base.html' %}
 
 {% block content %}
-	{% if messages %}
-		<div class="row mt-3">
-			{% for message in messages %}
-				{% if message.tags == 'error' %}
-					<div class="col-md-10 col-12 mx-auto alert alert-danger">
-						{{ message }}
-					</div>
-				{% else %}
-					{% if 'deleted' in message %}
-						<div class="col-md-10 col-12 mx-auto alert alert-danger" style="background-color: red; color: white;">
-							{{ message }}
-						</div>
-					{% else %}
-						<div class="col-md-10 col-12 mx-auto alert alert-success" style="background-color: green; color: white;">
-							{{ message }}
-						</div>
-					{% endif %}
-				{% endif %}
-			{% endfor %}
-		</div>
-	{% endif %}
-	<div class="row">
-		<div class="col-md-10 col-12 mx-auto mt-5">
-			<div class="d-flex justify-content-end">
-				<a href="{% url 'add-item' %}" class="btn btn-primary">+</a>
-			</div>
+    {% if messages %}
+        <div class="row mt-3">
+            {% for message in messages %}
+                {% if message.tags == 'error' %}
+                    <!-- Error message displayed in red with alert-danger class -->
+                    <div class="col-md-10 col-12 mx-auto alert alert-danger">
+                        {{ message }}
+                    </div>
+                {% else %}
+                    {% if 'deleted' in message %}
+                        <!-- Success message for item deletion, shown in red background for emphasis -->
+                        <div class="col-md-10 col-12 mx-auto alert alert-danger" style="background-color: red; color: white;">
+                            {{ message }}
+                        </div>
+                    {% else %}
+                        <!-- Success message, shown in green background when item is added or updated -->
+                        <div class="col-md-10 col-12 mx-auto alert alert-success" style="background-color: green; color: white;">
+                            {{ message }}
+                        </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+    
+    <div class="row">
+        <div class="col-md-10 col-12 mx-auto mt-5">
+            <div class="d-flex justify-content-end">
+                <!-- Link to add a new item -->
+                <a href="{% url 'add-item' %}" class="btn btn-primary">+</a>
+            </div>
 
-			<table class="table table-hover table-striped">
-				<thead>
-					<tr>
-						<th scope="col">ID</th>
-						<th scope="col">Name</th>
-						<th scope="col">Qty</th>
-						<th scope="col">Category</th>
-						<th scope="col"></th>
-						<th scope="col"></th>
-					</tr>
-				</thead>
-				<tbody>
-					{% if items|length == 0 %}
-					<tr>
-						<th scope="row">-</th>
-						<td>-</td>
-						<td>-</td>
-						<td>-</td>
-						<td>-</td>
-						<td></td>
-					</tr>
-					{% endif %}
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Category</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if items|length == 0 %}
+                        <!-- If no items are available, display a row with dashes -->
+                        <tr>
+                            <th scope="row">-</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td></td>
+                        </tr>
+                    {% endif %}
 
-					{% for item in items %}
-					<tr>
-						<th scope="row">{{ item.id }}</th>
-						<td>{{ item.name }}</td>
-						{% if item.id in low_inventory_ids %}
-							<td class="text-danger">{{ item.quantity }}</td>
-						{% else %}
-							<td class="text-success">{{ item.quantity }}</td>
-						{% endif %}
-						<td>{{ item.category.name }}</td>
-						<td><a href="{% url 'edit-item' item.id %}" class="btn btn-outline-secondary">Edit</a></td>
-						<td><a href="{% url 'delete-item' item.id %}" class="btn btn-secondary">Delete</a></td>
-					</tr>
-					{% endfor %}
-				</tbody>
-			</table>
-		</div>
-	</div>
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			// Find the success message elements
-			const successMessages = document.querySelectorAll('.alert-success');
-			
-			// Set a timeout to hide the success message after 5 seconds
-			successMessages.forEach(function(message) {
-				setTimeout(function() {
-					message.style.display = 'none';
-				}, 5000); // 5000 milliseconds = 5 seconds
-			});
-		});
-	</script>
+                    {% for item in items %}
+                    <tr>
+                        <th scope="row">{{ item.id }}</th>
+                        <td>{{ item.name }}</td>
+                        {% if item.id in low_inventory_ids %}
+                            <!-- If item quantity is low, display in red -->
+                            <td class="text-danger">{{ item.quantity }}</td>
+                        {% else %}
+                            <!-- Otherwise, display in green -->
+                            <td class="text-success">{{ item.quantity }}</td>
+                        {% endif %}
+                        <td>{{ item.category.name }}</td>
+                        <td><a href="{% url 'edit-item' item.id %}" class="btn btn-outline-secondary">Edit</a></td>
+                        <td><a href="{% url 'delete-item' item.id %}" class="btn btn-secondary">Delete</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Find the success message elements
+            const successMessages = document.querySelectorAll('.alert-success');
+            
+            // Set a timeout to hide the success message after 5 seconds
+            successMessages.forEach(function(message) {
+                setTimeout(function() {
+                    message.style.display = 'none';
+                }, 5000); // 5000 milliseconds = 5 seconds
+            });
+        });
+    </script>
 {% endblock content %}
+
 	
