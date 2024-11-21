@@ -1,26 +1,16 @@
 {% extends 'inventory/base.html' %}
 
 {% block content %}
-<!-- Begin the content block for this page -->
-
-<!-- Create a container for the page content -->
 <div>
-    <div class="row">
-        <!-- Create a centered column that adjusts its width for different screen sizes (col-sm-11 for small screens, col-md-4 for medium screens) -->
-        <div class="col-sm-11 col-md-4 mx-auto mt-5 px-3">
-            
-            <!-- Heading with a lighter font weight, describing the purpose of the page -->
-            <h1 class="fw-light">Track and Manage Your Inventory</h1>
-            
-            <!-- A brief description of the page functionality -->
-            <p class="fw-light">Keep track of your inventory and receive quantity alerts for low inventory</p>
+	<div class="row">
+		<div class="col-sm-11 col-md-4 mx-auto mt-5 px-3">
+			<h1 class="fw-light">Track and Manage Your Inventory</h1>
+			<p class="fw-light">Keep track of your inventory and receive quantity alerts for low inventory</p>
 
-            <!-- Link to the dashboard page, styled as a primary button (blue) to encourage users to get started -->
-            <div>
-                <a href="{% url 'dashboard' %}" class="btn btn-primary">Get Started Now!</a>
-            </div>
-        </div>
-    </div>
+			<div>
+				<a href="{% url 'dashboard' %}" class="btn btn-primary">Get Started Now!</a>
+			</div>
+		</div>
+	</div>
 </div>
-
 {% endblock content %}

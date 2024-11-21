@@ -2,44 +2,34 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <div class="row">
-        <div class="col-11 col-md-4 mx-auto mt-5">
-            <h1>Sign Up</h1>
+	<div class="row">
+		<div class="col-11 col-md-4 mx-auto mt-5">
+			<h1>Sign Up</h1>
+			{% if form.errors %}
+				{% for field in form %}
+					{% for error in field.errors %}
+						<div class="alert alert-danger">
+							<strong>{{ error|escape }}</strong>
+						</div>
+					{% endfor %}
+				{% endfor %}
+				{% for error in form.non_field_errors %}
+					<div class="alert alert-danger">
+						<strong>{{ error|escape }}</strong>
+					</div>
+				{% endfor %}
+			{% endif %}
 
-            <!-- Display form errors if there are any -->
-            {% if form.errors %}
-                {% for field in form %}
-                    {% for error in field.errors %}
-                        <!-- Display error messages for individual form fields -->
-                        <div class="alert alert-danger">
-                            <strong>{{ error|escape }}</strong>
-                        </div>
-                    {% endfor %}
-                {% endfor %}
-                
-                <!-- Display non-field errors (errors not tied to specific fields) -->
-                {% for error in form.non_field_errors %}
-                    <div class="alert alert-danger">
-                        <strong>{{ error|escape }}</strong>
-                    </div>
-                {% endfor %}
-            {% endif %}
+			<form method="post">
+				{% csrf_token %}
+				{{ form|crispy }}
 
-            <!-- The signup form -->
-            <form method="post">
-                {% csrf_token %}
-                
-                <!-- Render the form fields using crispy_forms for enhanced styling -->
-                {{ form|crispy }}
+				<button class="btn btn-primary" type="submit">Sign Up</button>
+			</form>
 
-                <!-- Submit button to complete the sign-up process -->
-                <button class="btn btn-primary" type="submit">Sign Up</button>
-            </form>
-
-            <!-- Provide a link for users who already have an account to log in -->
-            <div class="pt-3">
-                <small class="text-muted">Already have an account? <a href="{% url 'login' %}" class="ml-2">Sign In</a></small>
-            </div>
-        </div>
-    </div>
+			<div class="pt-3">
+				<small class="text-muted">Already have an account? <a href="{% url 'login' %}" class="ml-2">Sign In</a></small>
+			</div>
+		</div>
+	</div>
 {% endblock content %}
