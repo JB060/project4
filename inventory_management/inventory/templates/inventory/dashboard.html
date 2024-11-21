@@ -9,9 +9,15 @@
 						{{ message }}
 					</div>
 				{% else %}
-					<div class="col-md-10 col-12 mx-auto alert alert-success" style="background-color: green; color: white;">
-						{{ message }}
-					</div>
+					{% if 'deleted' in message %}
+						<div class="col-md-10 col-12 mx-auto alert alert-danger" style="background-color: red; color: white;">
+							{{ message }}
+						</div>
+					{% else %}
+						<div class="col-md-10 col-12 mx-auto alert alert-success" style="background-color: green; color: white;">
+							{{ message }}
+						</div>
+					{% endif %}
 				{% endif %}
 			{% endfor %}
 		</div>
@@ -63,5 +69,18 @@
 			</table>
 		</div>
 	</div>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			// Find the success message elements
+			const successMessages = document.querySelectorAll('.alert-success');
+			
+			// Set a timeout to hide the success message after 5 seconds
+			successMessages.forEach(function(message) {
+				setTimeout(function() {
+					message.style.display = 'none';
+				}, 5000); // 5000 milliseconds = 5 seconds
+			});
+		});
+	</script>
 {% endblock content %}
 	
