@@ -33,6 +33,7 @@ CSRF_TRUSTED_ORIGINS= ['https://*.gitpod.io','https://heroku.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'django_extensions',
     'inventory',
     'crispy_forms',
     'crispy_bootstrap5',
