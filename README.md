@@ -91,6 +91,13 @@ A Django-based web application to manage and track inventory items, organize the
 
 ---
 
+### Wireframes
+- **Home Page**: Welcomes users and prompts them to log in or sign up.
+  ![desktop](wireframes/startup desktop.png)
+
+
+---
+
 ### Surface
 
 - **Color Scheme**: Uses Bootstrap Minty theme for a clean, user-friendly interface.  
