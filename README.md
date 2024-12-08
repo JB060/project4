@@ -81,8 +81,6 @@ A Django-based web application to manage and track inventory items, organize the
 - **User Authentication**: Secure access to manage inventory.
 ![Relationable Diagram](media/postgres-diagram.png)
 
----
-
 ![Start Page](media/project4-structure.png)
 
 ---
