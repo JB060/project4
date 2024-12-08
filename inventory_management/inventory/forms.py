@@ -4,14 +4,31 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import Category, InventoryItem
 
 class UserRegisterForm(UserCreationForm):
-	email = forms.EmailField()
+    """
+    Form for registering a new user.
 
-	class Meta:
-		model = User
-		fields = ['username', 'email', 'password1', 'password2']
+    Inherits from Django's UserCreationForm and adds an email field.
+    
+    Attributes:
+    - email (EmailField): The email address of the user.
+    """
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
 
 class InventoryItemForm(forms.ModelForm):
-	category = forms.ModelChoiceField(queryset=Category.objects.all(), initial=0)
-	class Meta:
-		model = InventoryItem
-		fields = ['name', 'quantity', 'category']
+    """
+    Form for creating or updating an inventory item.
+
+    Allows users to enter details for an inventory item including name, quantity, and category.
+
+    Attributes:
+    - category (ModelChoiceField): A dropdown to select a category for the inventory item, populated with all categories.
+    """
+    category = forms.ModelChoiceField(queryset=Category.objects.all(), initial=0)
+
+    class Meta:
+        model = InventoryItem
+        fields = ['name', 'quantity', 'category']
