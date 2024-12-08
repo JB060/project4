@@ -245,6 +245,7 @@ Automated tests were written for critical components:
 ## Deployment
 
 ### Steps to Deploy on Heroku
+## THESE ARE THE STEPS THAT SHOULD BE TAKEN IF THE APP IS DEPLOYED. I HAVE BEEN IN CONTACT WITH TUTOR SUPPORT ON THE MATTER AND HAVE NOT FOUND AN ANSWER.
 
 1. Create a Heroku account and install Heroku CLI.
 2. Clone this repository and navigate to the project folder.
