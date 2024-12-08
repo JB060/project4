@@ -32,6 +32,7 @@ A Django-based web application to manage and track inventory items, organize the
 6. [Deployment](#deployment)  
    - [Steps to Deploy on Heroku](#steps-to-deploy-on-heroku)  
    - [Finished Product](#finished-product)  
+7. [Bugs](#bugs)
 
 ---
 
@@ -64,7 +65,7 @@ A Django-based web application to manage and track inventory items, organize the
 
 #### User Stories
 
-1. As a user, I want to create an account so that I can securely log in to the app.
+1. As a user, I want to create an account to securely log in to the app.
 2. As a user, I want to add items to my inventory so that I can keep track of stock levels.
 3. As a user, I want to categorize items to organize my inventory.
 4. As a user, I want to receive alerts when items are running low to stay informed about restocking needs.
@@ -245,6 +246,12 @@ Automated tests were written for critical components:
 4. Push the project to Heroku with `git push heroku main`.
 5. Set environment variables and configure the database on Heroku.
 6. Run `heroku run python manage.py migrate` to set up the database.
+
+---
+
+## Bugs
+
+The project does not deploy to Heroku for unknown reasons. I will attach a screenshot of the error screen for further debugging and reference.
 
 ---
 
