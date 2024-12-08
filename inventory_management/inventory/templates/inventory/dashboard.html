@@ -1,68 +1,106 @@
 {% extends 'inventory/base.html' %}
+<!-- Extends the base template from the "inventory" directory, allowing for a consistent layout -->
 
 {% block content %}
-	{% if messages %}
-		<div class="row mt-3">
-			{% for message in messages %}
-				{% if message.tags == 'error' %}
-					<div class="col-md-10 col-12 mx-auto alert alert-danger">
-						{{ message }}
-					</div>
-				{% else %}
-					<div class="col-md-10 col-12 mx-auto alert alert-success">
-						{{ message }}
-					</div>
-				{% endif %}
-			{% endfor %}
-		</div>
-	{% endif %}
-	<div class="row">
-		<div class="col-md-10 col-12 mx-auto mt-5">
-			<div class="d-flex justify-content-end">
-				<a href="{% url 'add-item' %}" class="btn btn-primary">+</a>
-			</div>
+<!-- Defines a content block to replace or add content in the "base.html" template -->
 
-			<table class="table table-hover table-striped">
-				<thead>
-					<tr>
-						<th scope="col">ID</th>
-						<th scope="col">Name</th>
-						<th scope="col">Qty</th>
-						<th scope="col">Category</th>
-						<th scope="col"></th>
-						<th scope="col"></th>
-					</tr>
-				</thead>
-				<tbody>
-					{% if items|length == 0 %}
-					<tr>
-						<th scope="row">-</th>
-						<td>-</td>
-						<td>-</td>
-						<td>-</td>
-						<td>-</td>
-						<td></td>
-					</tr>
-					{% endif %}
+    {% if messages %}
+    <!-- Checks if there are any messages to display (e.g., success or error notifications) -->
 
-					{% for item in items %}
-					<tr>
-						<th scope="row">{{ item.id }}</th>
-						<td>{{ item.name }}</td>
-						{% if item.id in low_inventory_ids %}
-							<td class="text-danger">{{ item.quantity }}</td>
-						{% else %}
-							<td class="text-success">{{ item.quantity }}</td>
-						{% endif %}
-						<td>{{ item.category.name }}</td>
-						<td><a href="{% url 'edit-item' item.id %}" class="btn btn-outline-secondary">Edit</a></td>
-						<td><a href="{% url 'delete-item' item.id %}" class="btn btn-secondary">Delete</a></td>
-					</tr>
-					{% endfor %}
-				</tbody>
-			</table>
-		</div>
-	</div>
+        <div class="row mt-3">
+            <!-- Creates a row for message display with some top margin -->
+            {% for message in messages %}
+            <!-- Loops through each message in the messages context -->
+
+                {% if message.tags == 'error' %}
+                <!-- Checks if the message has an 'error' tag -->
+                    <div class="col-md-10 col-12 mx-auto alert alert-danger">
+                        <!-- Displays an error message styled with a Bootstrap danger alert -->
+                        {{ message }}
+                    </div>
+                {% else %}
+                <!-- For messages without the 'error' tag, assume they are success messages -->
+                    <div class="col-md-10 col-12 mx-auto alert alert-success">
+                        <!-- Displays a success message styled with a Bootstrap success alert -->
+                        {{ message }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <div class="row">
+        <!-- Starts a new row for the main table -->
+        <div class="col-md-10 col-12 mx-auto mt-5">
+            <!-- Centers the content and adds top margin -->
+
+            <div class="d-flex justify-content-end">
+                <!-- Creates a flex container for right-aligned content -->
+                <a href="{% url 'add-item' %}" class="btn btn-primary">+</a>
+                <!-- A button linking to the "add-item" view, styled as a primary Bootstrap button -->
+            </div>
+
+            <table class="table table-hover table-striped">
+                <!-- A Bootstrap-styled table with hover and striped row effects -->
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <!-- Table header for item ID -->
+                        <th scope="col">Name</th>
+                        <!-- Table header for item name -->
+                        <th scope="col">Qty</th>
+                        <!-- Table header for item quantity -->
+                        <th scope="col">Category</th>
+                        <!-- Table header for item category -->
+                        <th scope="col"></th>
+                        <!-- Empty column for Edit button -->
+                        <th scope="col"></th>
+                        <!-- Empty column for Delete button -->
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if items|length == 0 %}
+                    <!-- Checks if the items list is empty -->
+                    <tr>
+                        <th scope="row">-</th>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td></td>
+                    </tr>
+                    <!-- Displays a placeholder row if there are no items -->
+                    {% endif %}
+
+                    {% for item in items %}
+                    <!-- Loops through each item in the items list -->
+                    <tr>
+                        <th scope="row">{{ item.id }}</th>
+                        <!-- Displays the item's ID -->
+                        <td>{{ item.name }}</td>
+                        <!-- Displays the item's name -->
+                        {% if item.id in low_inventory_ids %}
+                        <!-- Checks if the item's ID is in the low inventory list -->
+                            <td class="text-danger">{{ item.quantity }}</td>
+                            <!-- Displays the quantity in red if it is low -->
+                        {% else %}
+                            <td class="text-success">{{ item.quantity }}</td>
+                            <!-- Displays the quantity in green if it is sufficient -->
+                        {% endif %}
+                        <td>{{ item.category.name }}</td>
+                        <!-- Displays the name of the item's category -->
+                        <td><a href="{% url 'edit-item' item.id %}" class="btn btn-outline-secondary">Edit</a></td>
+                        <!-- Button linking to the "edit-item" view for the current item -->
+                        <td><a href="{% url 'delete-item' item.id %}" class="btn btn-secondary">Delete</a></td>
+                        <!-- Button linking to the "delete-item" view for the current item -->
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 {% endblock content %}
+<!-- Ends the content block -->
+
 
 	

@@ -1,18 +1,35 @@
 {% extends 'inventory/base.html' %}
+<!-- Extends the base template from the "inventory" directory, ensuring a consistent layout -->
 
 {% block content %}
-	<div>
-		<a href="{% url 'dashboard' %}" class="btn btn-outline-primary my-3 mx-4">Go back</a>
-		<div class="row">
-			<form method="POST" class="col-sm-11 col-md-4 mx-auto mt-5">
-				{% csrf_token %}
-				<h1 class="fw-light">Are you sure you want to delete {{ item.name }}?</h1>
-				<p class="fw-light">This cannot be undone</p>
+<!-- Defines a content block to add specific content to the "base.html" template -->
 
-				<div>
-					<button class="btn btn-danger">Delete</button>
-				</div>
-			</form>
-		</div>
-	</div>
+    <div>
+        <!-- Main container for the content -->
+        <a href="{% url 'dashboard' %}" class="btn btn-outline-primary my-3 mx-4">Go back</a>
+        <!-- Button to navigate back to the dashboard page, styled with Bootstrap -->
+
+        <div class="row">
+            <!-- Defines a row for structuring the form -->
+            <form method="POST" class="col-sm-11 col-md-4 mx-auto mt-5">
+                <!-- Form to handle the delete action, using the POST method for secure data submission -->
+                {% csrf_token %}
+                <!-- Adds a CSRF token for protection against cross-site request forgery attacks -->
+
+                <h1 class="fw-light">Are you sure you want to delete {{ item.name }}?</h1>
+                <!-- Displays a confirmation message with the item's name, using Django template syntax -->
+
+                <p class="fw-light">This cannot be undone</p>
+                <!-- Warns the user that the action is irreversible -->
+
+                <div>
+                    <!-- Container for the delete button -->
+                    <button class="btn btn-danger">Delete</button>
+                    <!-- Submit button styled as a Bootstrap danger button for emphasis -->
+                </div>
+            </form>
+        </div>
+    </div>
 {% endblock content %}
+<!-- Ends the content block -->
+

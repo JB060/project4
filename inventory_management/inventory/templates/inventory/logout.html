@@ -1,14 +1,27 @@
 {% extends 'inventory/base.html' %}
+<!-- Extends the base template from the "inventory" directory to maintain consistent layout and style -->
 
 {% block content %}
-	<div class="row">
-		<div class="col-11 col-md-4 mx-auto mt-5">
-			<h2>You Have Been Logged Out</h2>
-			<div class="border-top pt-3">
-				<small class="text-muted">
-					<a href="{% url 'login' %}">Log In Again</a>
-				</small>
-			</div>'
-		</div>
-	</div>
+<!-- Begins a content block to insert specific content into the "base.html" template -->
+
+    <div class="row">
+        <!-- Defines a row for layout structure -->
+        <div class="col-11 col-md-4 mx-auto mt-5">
+            <!-- Centers the content on small and medium screens, with a top margin -->
+
+            <h2>You Have Been Logged Out</h2>
+            <!-- Heading to inform the user they have been logged out -->
+
+            <div class="border-top pt-3">
+                <!-- Adds a border on top and padding above the link -->
+                <small class="text-muted">
+                    <!-- Displays the link in a smaller, muted style -->
+                    <a href="{% url 'login' %}">Log In Again</a>
+                    <!-- Link to the login page, allowing the user to log back in -->
+                </small>
+            </div>
+        </div>
+    </div>
 {% endblock content %}
+<!-- Ends the content block -->
+

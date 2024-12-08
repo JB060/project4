@@ -1,18 +1,42 @@
 {% extends 'inventory/base.html' %}
+<!-- Extends the base template from the "inventory" directory to ensure a consistent layout -->
+
 {% load crispy_forms_tags %}
+<!-- Loads the `crispy_forms_tags` library to style forms using Django Crispy Forms -->
 
 {% block content %}
+<!-- Begins a content block to insert specific content into the "base.html" template -->
+
 <div class="row">
-	<div class="col-11 col-md-4 mx-auto mt-5">
-		<h1>Log In</h1>
-		<form method="post">
-			{% csrf_token %}
-			{{ form|crispy }}
-			<button class="btn btn-primary">Sign In</button>
-		</form>
-		<div class="pt-3">
-			<small class="text-muted">Need an account? <a href="{% url 'signup' %}" class="ml-2">Sign Up</a></small>
-		</div>
-	</div>
+    <!-- Defines a row for layout -->
+    <div class="col-11 col-md-4 mx-auto mt-5">
+        <!-- Centers the content on small and medium screens with some top margin -->
+
+        <h1>Log In</h1>
+        <!-- Heading for the login form -->
+
+        <form method="post">
+            <!-- Form to handle the login process, using the POST method for secure data submission -->
+            {% csrf_token %}
+            <!-- Adds a CSRF token for protection against cross-site request forgery attacks -->
+
+            {{ form|crispy }}
+            <!-- Renders the login form with Crispy Forms styling -->
+
+            <button class="btn btn-primary">Sign In</button>
+            <!-- Submit button styled as a primary Bootstrap button -->
+        </form>
+
+        <div class="pt-3">
+            <!-- Adds some top padding to the additional information -->
+            <small class="text-muted">
+                <!-- Displays a small text message in muted style -->
+                Need an account? 
+                <a href="{% url 'signup' %}" class="ml-2">Sign Up</a>
+                <!-- Link to the signup page, allowing new users to create an account -->
+            </small>
+        </div>
+    </div>
 </div>
 {% endblock content %}
+<!-- Ends the content block -->

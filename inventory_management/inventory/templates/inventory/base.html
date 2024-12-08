@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://bootswatch.com/5/minty/bootstrap.min.css" rel="stylesheet">
+    <!-- Specifies the document type and ensures it is interpreted as HTML5 -->
+    <meta charset="UTF-8">
+    <!-- Sets the character encoding of the document to UTF-8 -->
 
-	<title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures proper scaling and rendering on mobile devices by setting the viewport -->
+
+    <link href="https://bootswatch.com/5/minty/bootstrap.min.css" rel="stylesheet">
+    <!-- Links to an external Bootstrap stylesheet from Bootswatch for styling -->
+
+    <title>Document</title>
+    <!-- Specifies the title of the document that appears in the browser tab -->
 </head>
 <body>
-	{% include 'inventory/navigation.html' %}
+    <!-- Body content starts here -->
 
-	{% block content %}
-	{% endblock content %}
-	
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    {% include 'inventory/navigation.html' %}
+    <!-- Includes a separate navigation HTML file, useful for reusing the navigation bar across pages -->
+
+    {% block content %}
+    {% endblock content %}
+    <!-- A Django template block to allow dynamic insertion of page-specific content -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <!-- Includes the Bootstrap JavaScript bundle for enabling interactivity, with integrity and crossorigin attributes for security -->
 </body>
 </html>
+

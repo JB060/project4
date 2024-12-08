@@ -1,21 +1,39 @@
 {% extends 'inventory/base.html' %}
+<!-- Extends the base template from the "inventory" directory to maintain a consistent structure and style -->
+
 {% load crispy_forms_tags %}
+<!-- Loads the `crispy_forms_tags` template tag library to style forms with Django Crispy Forms -->
 
 {% block content %}
-	<a href="{% url 'dashboard' %}" class="btn btn-outline-primary my-3 mx-4">Go Back</a>
+<!-- Defines a content block to add specific content to the "base.html" template -->
 
-	<div class="row">
-		<div class="col-11 col-md-4 mx-auto mt-5">
-			<h1>Inventory Item</h1>
+    <a href="{% url 'dashboard' %}" class="btn btn-outline-primary my-3 mx-4">Go Back</a>
+    <!-- A button to navigate back to the dashboard, styled with Bootstrap -->
 
-			<form method="POST">
-				{% csrf_token %}
-				{{ form|crispy }}
+    <div class="row">
+        <!-- Defines a row for layout structure -->
+        <div class="col-11 col-md-4 mx-auto mt-5">
+            <!-- Centers the content on small and medium screens with some top margin -->
 
-				<div class="mt-3">
-					<button class="btn btn-primary">Add Item</button>
-				</div>
-			</form>
-		</div>
-	</div>
+            <h1>Inventory Item</h1>
+            <!-- Displays a heading for the form -->
+
+            <form method="POST">
+                <!-- Form to handle adding a new inventory item, using the POST method for secure submission -->
+                {% csrf_token %}
+                <!-- Adds a CSRF token for protection against cross-site request forgery attacks -->
+
+                {{ form|crispy }}
+                <!-- Renders the form with Crispy Forms, applying consistent styling -->
+
+                <div class="mt-3">
+                    <!-- Adds some top margin to the button -->
+                    <button class="btn btn-primary">Add Item</button>
+                    <!-- Submit button styled as a primary Bootstrap button -->
+                </div>
+            </form>
+        </div>
+    </div>
 {% endblock content %}
+<!-- Ends the content block -->
+
