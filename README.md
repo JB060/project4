@@ -258,6 +258,8 @@ Automated tests were written for critical components:
 ## Bugs
 
 The project does not deploy to Heroku for unknown reasons. I will attach a screenshot of the error screen for further debugging and reference.
+<img src= "media/Screenshot 2024-12-08 at 17.58.20.png" alt= "I'm getting an IP mismatch notification when I try to deploy to Heroku" >
+
 
 ---
 
