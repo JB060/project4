@@ -93,7 +93,7 @@ A Django-based web application to manage and track inventory items, organize the
 
 ### Wireframes
 - **Home Page**: Welcomes users and prompts them to log in or sign up.
-<img src="workspace/project4/wireframes/startup-desktop.png" alt="Desktop view">
+<img src="wireframes/startup-desktop.png" alt="Desktop view">
 
 
 ---
