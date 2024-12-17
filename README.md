@@ -258,7 +258,8 @@ Automated tests were written for critical components:
 
 ## Bugs
 
-The project does not deploy to Heroku for unknown reasons. I will attach a screenshot of the error screen for further debugging and reference.
+For unknown reasons, the project is not deployed to Heroku. I will attach a screenshot of the error screen for further debugging and reference.
+I've logged a call with student support to fix the issue on the problem but will need to wait until the call fir me to be able to deploy the project
 <img src= "media/Screenshot 2024-12-08 at 17.58.20.png" alt= "I'm getting an IP mismatch notification when I try to deploy to Heroku" >
 
 
