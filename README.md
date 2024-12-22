@@ -227,7 +227,7 @@ To enhance the application's functionality and user experience, the following fe
 ### Manual Testing
 ![Index](media/testing1.png)
 ![Navigation](media/testing2.png)
-![Base](media/testing3.png)
+![Base](media/testing3 .png)
 ![login](media/testing4.png)
 
 Each feature was manually tested by simulating user interactions, including:
