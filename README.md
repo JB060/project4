@@ -225,6 +225,10 @@ To enhance the application's functionality and user experience, the following fe
 ## Testing
 
 ### Manual Testing
+![Index](media/testing1.png)
+![Navigation](media/testing2.png)
+![Base](media/testing3.png)
+![login](media/testing4.png)
 
 Each feature was manually tested by simulating user interactions, including:
 1. **User Authentication**: Verified sign-up, login, and logout functionalities.
@@ -232,6 +236,8 @@ Each feature was manually tested by simulating user interactions, including:
 3. **Low Inventory Alerts**: Confirmed alerts display for items at or below the minimum threshold.
 4. **Responsive Design**: Verified the application's compatibility across various screen sizes (desktop, tablet, and mobile).
 5. **Error Handling**: Checked for error messages in case of incorrect inputs (e.g., empty fields).
+
+
 
 ### Automated Testing
 
